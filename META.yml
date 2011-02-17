@@ -28,4 +28,4 @@ requires:
   String::Random: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.2
+version: 0.0.3

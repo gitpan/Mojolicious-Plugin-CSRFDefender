@@ -22,5 +22,6 @@ t/03-custom.t
 t/04-custom-template.t
 t/403.html
 t/perlcritic.t
+t/perlcriticrc
 t/pod-coverage.t
 t/pod.t
