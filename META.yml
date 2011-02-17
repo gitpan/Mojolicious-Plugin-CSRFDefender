@@ -21,6 +21,7 @@ no_index:
   directory:
     - inc
     - t
+    - xt
 requires:
   Class::Accessor::Fast: 0
   Mojolicious: 0
@@ -28,4 +29,4 @@ requires:
   String::Random: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.3
+version: 0.0.4

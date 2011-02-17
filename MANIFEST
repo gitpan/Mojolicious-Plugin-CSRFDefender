@@ -1,6 +1,7 @@
 Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
@@ -21,7 +22,7 @@ t/02-multiple-forms.t
 t/03-custom.t
 t/04-custom-template.t
 t/403.html
-t/perlcritic.t
-t/perlcriticrc
-t/pod-coverage.t
-t/pod.t
+xt/perlcritic.t
+xt/perlcriticrc
+xt/pod-coverage.t
+xt/pod.t
