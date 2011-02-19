@@ -21,6 +21,7 @@ t/01-default.t
 t/02-multiple-forms.t
 t/03-custom.t
 t/04-custom-template.t
+t/05-onetime.t
 t/403.html
 xt/perlcritic.t
 xt/perlcriticrc
