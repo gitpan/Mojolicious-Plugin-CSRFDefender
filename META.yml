@@ -24,9 +24,9 @@ no_index:
     - xt
 requires:
   Class::Accessor::Fast: 0
-  Mojolicious: 0
+  Mojolicious: 1.43
   Path::Class: 0
   String::Random: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.5
+version: 0.0.6
