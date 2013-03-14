@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '0.0.6';
+our $VERSION = '0.0.7';
 
 use base qw(Mojolicious::Plugin Class::Accessor::Fast);
 __PACKAGE__->mk_accessors(qw(
@@ -39,7 +39,7 @@ sub register {
     }
 
     # input check
-    $app->hook(after_static_dispatch => sub {
+    $app->hook(before_dispatch => sub {
         my ($c) = @_;
         unless ($self->_validate_csrf($c)) {
             my $content;
@@ -63,7 +63,7 @@ sub register {
         my $token = $self->_get_csrf_token($c);
         my $p_name = $self->parameter_name;
         my $body = $c->res->body;
-        $body =~ s{(<form\s*[^>]*method="POST"[^>]*>)}{$1\n<input type="hidden" name="$p_name" value="$token" />}isg;
+        $body =~ s{(<form\s*[^>]*method=["']POST["'][^>]*>)}{$1\n<input type="hidden" name="$p_name" value="$token" />}isg;
         $c->res->body($body);
     });
 
@@ -116,7 +116,7 @@ Mojolicious::Plugin::CSRFDefender - Defend CSRF automatically in Mojolicious App
 
 =head1 VERSION
 
-This document describes Mojolicious::Plugin::CSRFDefender version 0.0.6
+This document describes Mojolicious::Plugin::CSRFDefender.
 
 
 =head1 SYNOPSIS
@@ -226,7 +226,7 @@ Register plugin in L<Mojolicious> application.
 
 =head1 REPOSITORY
 
-https://github.com/shiba-yu36/p5-Mojolicious-Plugin-CSRFDefender
+https://github.com/shibayu36/p5-Mojolicious-Plugin-CSRFDefender
 
 =head1 AUTHOR
 
